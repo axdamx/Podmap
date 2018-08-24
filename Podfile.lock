@@ -1,0 +1,24 @@
+PODS:
+  - FreshchatSDK (1.4.5)
+  - GoogleMaps (2.7.0):
+    - GoogleMaps/Maps (= 2.7.0)
+  - GoogleMaps/Base (2.7.0)
+  - GoogleMaps/Maps (2.7.0):
+    - GoogleMaps/Base
+
+DEPENDENCIES:
+  - FreshchatSDK
+  - GoogleMaps
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FreshchatSDK
+    - GoogleMaps
+
+SPEC CHECKSUMS:
+  FreshchatSDK: 0b00bf1b713ef849dc1d14039da2455c26d9fe6e
+  GoogleMaps: f79af95cb24d869457b1f961c93d3ce8b2f3b848
+
+PODFILE CHECKSUM: 0d7e6a8604884f4cc5418b8d5b98d5bd94180074
+
+COCOAPODS: 1.5.3
