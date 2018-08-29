@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		780B10513CD51F7D219AD19A /* Pods_Podmap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1329918C855DFB73859D29E5 /* Pods_Podmap.framework */; };
+		81422C9D2135872A00343C25 /* FreshchatSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 81422C9C2135872A00343C25 /* FreshchatSDK.m */; };
 		8174B642212EEF3E00870849 /* PodObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8174B641212EEF3E00870849 /* PodObject.swift */; };
-		8174B646212EFB2000870849 /* ParseJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8174B645212EFB2000870849 /* ParseJson.swift */; };
 		81EBB876212EE34200B69E62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EBB875212EE34200B69E62 /* AppDelegate.swift */; };
 		81EBB878212EE34200B69E62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81EBB877212EE34200B69E62 /* ViewController.swift */; };
 		81EBB87B212EE34200B69E62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81EBB879212EE34200B69E62 /* Main.storyboard */; };
@@ -19,8 +19,9 @@
 
 /* Begin PBXFileReference section */
 		1329918C855DFB73859D29E5 /* Pods_Podmap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Podmap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		81422C9B2135872A00343C25 /* Podmap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Podmap-Bridging-Header.h"; sourceTree = "<group>"; };
+		81422C9C2135872A00343C25 /* FreshchatSDK.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FreshchatSDK.m; sourceTree = "<group>"; };
 		8174B641212EEF3E00870849 /* PodObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodObject.swift; sourceTree = "<group>"; };
-		8174B645212EFB2000870849 /* ParseJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJson.swift; sourceTree = "<group>"; };
 		81EBB872212EE34200B69E62 /* Podmap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Podmap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81EBB875212EE34200B69E62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81EBB877212EE34200B69E62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,14 +75,15 @@
 		81EBB874212EE34200B69E62 /* Podmap */ = {
 			isa = PBXGroup;
 			children = (
+				81EBB879212EE34200B69E62 /* Main.storyboard */,
 				81EBB875212EE34200B69E62 /* AppDelegate.swift */,
 				81EBB877212EE34200B69E62 /* ViewController.swift */,
-				81EBB879212EE34200B69E62 /* Main.storyboard */,
 				8174B641212EEF3E00870849 /* PodObject.swift */,
-				8174B645212EFB2000870849 /* ParseJson.swift */,
 				81EBB87C212EE34300B69E62 /* Assets.xcassets */,
 				81EBB87E212EE34300B69E62 /* LaunchScreen.storyboard */,
 				81EBB881212EE34300B69E62 /* Info.plist */,
+				81422C9C2135872A00343C25 /* FreshchatSDK.m */,
+				81422C9B2135872A00343C25 /* Podmap-Bridging-Header.h */,
 			);
 			path = Podmap;
 			sourceTree = "<group>";
@@ -128,6 +130,7 @@
 				TargetAttributes = {
 					81EBB871212EE34200B69E62 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -212,10 +215,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8174B646212EFB2000870849 /* ParseJson.swift in Sources */,
 				81EBB878212EE34200B69E62 /* ViewController.swift in Sources */,
 				81EBB876212EE34200B69E62 /* AppDelegate.swift in Sources */,
 				8174B642212EEF3E00870849 /* PodObject.swift in Sources */,
+				81422C9D2135872A00343C25 /* FreshchatSDK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +363,7 @@
 			baseConfigurationReference = C408CAC1D2198925A20B0D6B /* Pods-Podmap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3F9ZJ33XLL;
 				INFOPLIST_FILE = Podmap/Info.plist;
@@ -369,6 +373,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.Podmap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Podmap/Podmap-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,6 +385,7 @@
 			baseConfigurationReference = B1F8D158552449F038EE4661 /* Pods-Podmap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3F9ZJ33XLL;
 				INFOPLIST_FILE = Podmap/Info.plist;
@@ -388,6 +395,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.adam.Podmap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Podmap/Podmap-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
