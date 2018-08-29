@@ -75,17 +75,41 @@
 		81EBB874212EE34200B69E62 /* Podmap */ = {
 			isa = PBXGroup;
 			children = (
-				81EBB879212EE34200B69E62 /* Main.storyboard */,
 				81EBB875212EE34200B69E62 /* AppDelegate.swift */,
-				81EBB877212EE34200B69E62 /* ViewController.swift */,
-				8174B641212EEF3E00870849 /* PodObject.swift */,
+				81EE837E2136EC4200058713 /* Model */,
+				81EE837F2136EC5700058713 /* View */,
+				81EE83802136EC5C00058713 /* Controller */,
 				81EBB87C212EE34300B69E62 /* Assets.xcassets */,
-				81EBB87E212EE34300B69E62 /* LaunchScreen.storyboard */,
-				81EBB881212EE34300B69E62 /* Info.plist */,
 				81422C9C2135872A00343C25 /* FreshchatSDK.m */,
 				81422C9B2135872A00343C25 /* Podmap-Bridging-Header.h */,
+				81EBB881212EE34300B69E62 /* Info.plist */,
 			);
 			path = Podmap;
+			sourceTree = "<group>";
+		};
+		81EE837E2136EC4200058713 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8174B641212EEF3E00870849 /* PodObject.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		81EE837F2136EC5700058713 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				81EBB879212EE34200B69E62 /* Main.storyboard */,
+				81EBB87E212EE34300B69E62 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		81EE83802136EC5C00058713 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				81EBB877212EE34200B69E62 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		833F8122857536E657ED79C3 /* Frameworks */ = {
