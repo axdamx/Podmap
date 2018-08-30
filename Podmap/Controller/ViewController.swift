@@ -41,10 +41,10 @@ class ViewController: UIViewController {
         locationTextLabel.text = ""
         
         mapView.delegate = self
-        chatUserObject()
-        parseJsonData()
-        freshChatNotification()
-        mapLocationManager()
+        chatUserObject() // FreshChat settings
+        parseJsonData() // Succesfully parse the whole Json data in, but couldn't get the coordinates's value. Thus couldn't parse in the coordinates to create the polygon :(
+        freshChatNotification() // FreshChat settings with notifications
+        mapLocationManager() // Location Manager delegate
         
     }
     
@@ -82,8 +82,8 @@ class ViewController: UIViewController {
                 let parseJsonData = try JSONDecoder().decode(PodObject.self, from: data)
                 for data in parseJsonData {
                     
-                    print(data.plnAreaN)
-                    print(data.geojson)
+                    //print(data.plnAreaN)
+                    //print(data.geojson)
                 }
                 
             } catch let Jsonerror {
@@ -140,8 +140,8 @@ class ViewController: UIViewController {
         path.add(CLLocationCoordinate2D(latitude: coordinateArray[0].latitude, longitude: coordinateArray[0].longitude))
         
         polygonPath = GMSPolyline(path: path)
-        polygonPath.strokeColor = UIColor.red
-        polygonPath.strokeWidth = 2.0
+        polygonPath.strokeColor = UIColor.blue
+        polygonPath.strokeWidth = 1.5
         polygonPath.map = mapView
     }
     
@@ -164,7 +164,6 @@ class ViewController: UIViewController {
     func cameraMoveToLocation(toLocation: CLLocationCoordinate2D?) {
         if toLocation != nil {
             mapView.animate(to: GMSCameraPosition(target: toLocation!, zoom: 18, bearing: 0, viewingAngle: 0))
-            
         }
     }
 }
@@ -224,6 +223,7 @@ extension ViewController: GMSMapViewDelegate {
         let marker = GMSMarker(position: coordinate)
         reverseGeocodeCoordinate(coordinate)
         marker.title = "Found You!"
+        marker.icon = UIImage(named: "icons8-marker")
         marker.map = mapView
         
         coordinateArray.append(coordinate)
